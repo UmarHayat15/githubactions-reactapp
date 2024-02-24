@@ -1,2 +1,8 @@
-name: Output information
+name: Output_info
 on: workflow_dispatch
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub context
+        run: echo "The event that triggered this action was ${{ toJson(github) }}"
